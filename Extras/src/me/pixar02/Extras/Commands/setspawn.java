@@ -34,6 +34,7 @@ public class setspawn implements CommandExecutor {
 				plugin.getConfig().set("spawn.Yaw", loc.getYaw());
 				plugin.getConfig().set("spawn.Pitch", loc.getPitch());
 				sender.sendMessage(ChatColor.GREEN + "New Spawn has been set!");
+				plugin.saveConfig();
 			}else{
 				plugin.getConfig().set("spawn.World", loc.getWorld().getName());
 				plugin.getConfig().set("spawn.X", loc.getX());
@@ -42,6 +43,7 @@ public class setspawn implements CommandExecutor {
 				plugin.getConfig().set("spawn.Yaw", loc.getYaw());
 				plugin.getConfig().set("spawn.Pitch", loc.getPitch());
 				sender.sendMessage(ChatColor.GREEN + "New Spawn has been set!" + ChatColor.RED + " (You overrote the last spawn)");
+				plugin.saveConfig();
 			}
 		}
 		}

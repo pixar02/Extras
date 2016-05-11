@@ -19,7 +19,7 @@ public class reload implements CommandExecutor {
 		if(!(sender instanceof Player)){
 			sender.sendMessage(ChatColor.RED + "You have to be a player to perform this command!");
 		}else{
-			plugin.saveConfig();
+			plugin.reloadConfig();
 		}
 		return false;
 	}

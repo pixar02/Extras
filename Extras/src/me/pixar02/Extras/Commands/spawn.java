@@ -28,6 +28,7 @@ public class spawn implements CommandExecutor {
 			if(plugin.getConfig().getString("spawn") == null){
 				sender.sendMessage(ChatColor.RED + "No Spawn set!");
 			}else{
+				if(plugin.getConfig().getBoolean("essentials") != true){
 				World world = Bukkit.getWorld(plugin.getConfig().getString("spawn.World"));
 				double x = plugin.getConfig().getDouble("spawn.X");
 				double y = plugin.getConfig().getDouble("spawn.Y");
@@ -36,7 +37,10 @@ public class spawn implements CommandExecutor {
 				int pitch = plugin.getConfig().getInt("spawn.Pitch");
 				Location loc = new Location(world, x, y, z, yaw, pitch);
 				player.teleport(loc);
-
+				}else{
+					player.performCommand("spawn");
+				}
+				
 			}
 		}
 		}
