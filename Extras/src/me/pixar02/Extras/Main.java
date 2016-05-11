@@ -10,6 +10,7 @@ import me.pixar02.Extras.Commands.reload;
 import me.pixar02.Extras.Commands.setspawn;
 import me.pixar02.Extras.Commands.spawn;
 import me.pixar02.Extras.Events.player.Join;
+import me.pixar02.Extras.Events.player.PlayerFall;
 
 public class Main extends JavaPlugin{
 
@@ -22,6 +23,7 @@ public class Main extends JavaPlugin{
 		registerConfig();
 		
 		logger.info(pdfFile.getName() + " has been enabled (V." + pdfFile.getVersion() + ")");
+		getConfig().set("VR", pdfFile.getVersion());
 	}
 	public void onDisable(){
 		PluginDescriptionFile pdfFile = getDescription();
@@ -35,6 +37,7 @@ public class Main extends JavaPlugin{
 	public void registerEvents(){
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvents(new Join(this), this);
+		pm.registerEvents(new PlayerFall(this), this);
 	}
 	public void registerCommands(){
 		getCommand("esetspawn").setExecutor(new setspawn(this));

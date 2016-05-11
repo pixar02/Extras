@@ -1,6 +1,6 @@
 #config file for Extras, author is pixar02
 #don't edit this !:
-VR:51
+VR:
 
 
 #Now you can edit what you want !
@@ -9,3 +9,8 @@ spawn:
 
 #if players should teleport to the spawn if they join
 teleport: true
+
+#all configuration about void fall
+Teleport:
+    tele: true
+    Y: 10
