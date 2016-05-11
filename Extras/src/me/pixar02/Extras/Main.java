@@ -13,9 +13,8 @@ import me.pixar02.Extras.Events.player.Join;
 import me.pixar02.Extras.Events.player.PlayerFall;
 
 public class Main extends JavaPlugin{
-
+	PluginDescriptionFile pdfFile = getDescription();
 	public void onEnable(){
-		PluginDescriptionFile pdfFile = getDescription();
 		Logger logger = getLogger();
 		
 		registerCommands();
@@ -46,6 +45,7 @@ public class Main extends JavaPlugin{
 	}
 	public void registerConfig(){
 	getConfig().options().copyDefaults(true);
+	getConfig().set("VR", pdfFile.getVersion());
 	saveConfig();
 	}
 }
