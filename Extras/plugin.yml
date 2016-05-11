@@ -6,27 +6,24 @@ version: 1.3.5
 commands:
   espawn:
     description: teleports to spawn set in config.
-    usage: Syntax error! Perhaps you meant /<command> ?
     permission: ex.spawn
     permission-message: You do not have /<permission>
   esetspawn:
     description: sets sawn in the config.
-    usage: Syntax error! Perhaps you meant /<command> ?
     permission: ex.spawn
     permission-message: You do not have /<permission>
   ereload:
     description: reload plugins config.
-    usage: Syntax error! Perhaps you meant /<command> ?
     permission: ex.reload
     permission-message: You do not have /<permission>
     
 permissions:
   ex.*:
-  description: gives you all permissions
-  children:
-    ex.spawn: true
-    ex.setspawn: true
-    ex.reload: true
+    description: gives you all permissions
+    children:
+      ex.spawn: true
+      ex.setspawn: true
+      ex.reload: true
   ex.exempt:
     description: Allows you to NOT teleport to spawn
   ex.spawn:

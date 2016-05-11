@@ -23,7 +23,7 @@ public class Main extends JavaPlugin{
 		registerConfig();
 		
 		logger.info(pdfFile.getName() + " has been enabled (V." + pdfFile.getVersion() + ")");
-		getConfig().set("VR", pdfFile.getVersion());
+		//getConfig().set("VR", pdfFile.getVersion());
 	}
 	public void onDisable(){
 		PluginDescriptionFile pdfFile = getDescription();
@@ -46,7 +46,6 @@ public class Main extends JavaPlugin{
 	}
 	public void registerConfig(){
 	getConfig().options().copyDefaults(true);
-	saveDefaultConfig();
 	saveConfig();
 	}
 }
