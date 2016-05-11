@@ -6,6 +6,7 @@ import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.pixar02.Extras.Commands.reload;
 import me.pixar02.Extras.Commands.setspawn;
 import me.pixar02.Extras.Commands.spawn;
 import me.pixar02.Extras.Events.player.Join;
@@ -38,9 +39,11 @@ public class Main extends JavaPlugin{
 	public void registerCommands(){
 		getCommand("esetspawn").setExecutor(new setspawn(this));
 		getCommand("espawn").setExecutor(new spawn(this));
+		getCommand("ereload").setExecutor(new reload(this));
 	}
 	public void registerConfig(){
 	getConfig().options().copyDefaults(true);
+	saveDefaultConfig();
 	saveConfig();
 	}
 }

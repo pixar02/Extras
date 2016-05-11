@@ -24,6 +24,7 @@ public class setspawn implements CommandExecutor {
 		}else{
 			Player player = (Player) sender;
 			Location loc = player.getLocation();
+			if(player.hasPermission("ex.spawn")){
 			if(plugin.getConfig().getString("spawn") == null){
 
 				plugin.getConfig().set("spawn.World", loc.getWorld().getName());
@@ -42,6 +43,7 @@ public class setspawn implements CommandExecutor {
 				plugin.getConfig().set("spawn.Pitch", loc.getPitch());
 				sender.sendMessage(ChatColor.GREEN + "New Spawn has been set!" + ChatColor.RED + " (You overrote the last spawn)");
 			}
+		}
 		}
 		return false;
 	}

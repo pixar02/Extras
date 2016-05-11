@@ -24,6 +24,7 @@ public class spawn implements CommandExecutor {
 			sender.sendMessage(ChatColor.RED + "You have to be a player to perform this command!");
 		}else{
 			Player player = (Player) sender;
+			if(player.hasPermission("ex.spawn")){
 			if(plugin.getConfig().getString("spawn") == null){
 				sender.sendMessage(ChatColor.RED + "No Spawn set!");
 			}else{
@@ -37,6 +38,7 @@ public class spawn implements CommandExecutor {
 				player.teleport(loc);
 
 			}
+		}
 		}
 		return false;
 	}
