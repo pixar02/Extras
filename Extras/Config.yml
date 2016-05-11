@@ -1,0 +1,11 @@
+#config file for Extras, author is pixar02
+#don't edit this !:
+VR:51
+
+
+#Now you can edit what you want !
+#spawn loaction
+spawn:
+
+#if players should teleport to the spawn if they join
+teleport: true

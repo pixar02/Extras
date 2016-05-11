@@ -19,7 +19,7 @@ public class Join implements Listener {
 	 if(plugin.getConfig().getString("spawn.World") != null){
 		 if(player.hasPermission("ex.spawn")|| player.isOp()){
 		 	if(!(player.hasPermission("ex.exempt"))){
-			 
+			 player.performCommand("espawn");
 		 		}
 	 		}
 	 	}
