@@ -20,8 +20,9 @@ public class PlayerFall implements Listener{
             Player player = event.getPlayer();
             if(player.hasPermission("ex.teleport")){
                 if(player.getLocation().getY() <= plugin.getConfig().getInt("Teleport.Y")){
-                    player.performCommand("espawn");
-                   
+                    if(plugin.getConfig().get("spawn.Y") != null){
+                	player.performCommand("espawn");
+                    }
                    
                 }
             }
