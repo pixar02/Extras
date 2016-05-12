@@ -4,15 +4,16 @@ VR:
 
 
 #Now you can edit what you want !
-#spawn loaction
+#spawn loaction:
 spawn:
 
-#if players should teleport to the spawn if they join
+#if players should teleport to the spawn if they join:
 teleport: true
 
-#all configuration about void fall
+#all configuration about void fall:
 Teleport:
     tele: true
     Y: 10
 
+#essentials integration if you want to teleport to essentials spawn instead of this plugins spawn.
 essentials: false
