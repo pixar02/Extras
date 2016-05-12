@@ -44,7 +44,8 @@ public class Main extends JavaPlugin{
 		getCommand("ereload").setExecutor(new reload(this));
 	}
 	public void registerConfig(){
-	getConfig().options().copyDefaults(true);
+	saveDefaultConfig();
+	saveConfig();
 	getConfig().set("VR", pdfFile.getVersion());
 	saveConfig();
 	}
